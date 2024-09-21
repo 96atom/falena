@@ -2,10 +2,12 @@ body {
     font-family: 'Playfair Display', serif;
     background-color: #f8f4e9;
     color: #3c2f2f; 
+    font-size: 16px; /* Set a base font size */
 }
 
 .container {
-    width: 80%;
+    width: 90%;  
+    max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
@@ -19,8 +21,8 @@ body {
 }
 
 .header img {
-    width: 100px;
-    height: 100px;
+    width: 80px; /* Reduced size for mobile */
+    height: 80px;
     border-radius: 50%;
 }
 
@@ -29,62 +31,69 @@ body {
 }
 
 .menu-section h2 {
-    font-size: 24px; 
+    font-size: 20px; 
     margin-bottom: 10px;
     color: #3c2f2f;
     font-weight: bold;
 }
 
+/* Improved Menu Item Layout */
 .menu-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .menu-item:hover {
     background-color: #f5f5f5;
-    text-decoration: underline; 
+    text-decoration: underline;
 }
 
 .menu-item:last-child {
     border-bottom: none;
 }
 
+.item-info { /* To group image and name */
+    display: flex;
+    align-items: center;
+}
+
 .menu-item img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
 }
 
 .menu-item-name {
-    font-size: 18px; 
-    color: #3c2f2f; 
+  font-size: 16px;
+  color: #3c2f2f;
 }
 
 .menu-item-price {
-    font-size: 16px; 
-    color: #666;
+  font-size: 16px;
+  text-align: right; /* Align the price to the right */
+  color: #666;
 }
 
 /* Rounded Image Section */
 .rounded-image-section {
     position: relative;
-    width: 200px; 
-    height: 200px; 
+    width: 150px; /* Smaller for mobile */
+    height: 150px;
     overflow: hidden;
-    border-radius: 50%; 
-    margin: 0 auto; 
-    margin-bottom: 20px; 
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 .rounded-image-section img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
 /* Popup Modal Styles */
@@ -95,38 +104,69 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fff;
-    padding: 40px; 
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    max-width: 80%;
-    overflow-y: auto; 
+    max-width: 90%; 
+    margin: 20px auto; /* Center with margins */
+    overflow-y: auto;
 }
 
 .popup img {
-    width: 100%; 
+    width: 100%;
     height: auto;
-    object-fit: contain; 
+    object-fit: contain;
     margin-bottom: 20px;
 }
 
 .close {
     position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 25px; 
-    cursor: pointer;
+    top: 15px;
+    right: 20px;
+    font-size: 20px;
+    padding: 5px 10px; 
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer; 
 }
 
 /* Separator Line */
 .section-divider {
     border: none;
-    border-top: 1px solid #ccc; 
+    border-top: 1px solid #ccc;
     margin: 20px 0;
 }
 
-/* Media Queries for Responsiveness */
+/* Media Queries - Mostly for larger screens */ 
 
+/* Tablet-sized screens and larger (adjust breakpoint if needed) */
+@media (min-width: 768px) { 
+
+    .container {
+        width: 80%; /* Original width */
+        padding: 20px; 
+    }
+
+    .header img {
+        width: 100px; /* Original size */
+        height: 100px;
+    }
+
+    .menu-section h2 {
+        font-size: 24px; 
+    }
+
+    .rounded-image-section {
+        width: 200px; /* Original size */
+        height: 200px;
+    }
+
+    .popup {
+        max-width: 80%; /* Adjust as needed */
+        margin: 40px auto; /* Larger margin */
+    }
+}
 /* Tablet-sized screens and smaller */
 @media (max-width: 1024px) { 
     .container {
@@ -139,42 +179,5 @@ body {
 
     .menu-section h2 {
         font-size: 22px;
-    }
-}
-
-/* Typical phone sizes and smaller */
-@media (max-width: 768px) { 
-    .container {
-        width: 95%;
-        padding: 15px; 
-    }
-
-    .popup {
-        padding: 20px; 
-        max-width: 95%; 
-    }
-
-    .popup img {
-        margin-bottom: 15px; 
-    }
-
-    .close {
-        font-size: 20px; 
-    }
-
-    .menu-section h2 {
-        font-size: 20px; 
-    }
-
-    .menu-item {
-        font-size: 14px; 
-    }
-
-    .menu-item-name {
-        font-size: 16px;
-    }
-
-    .menu-item-price {
-        font-size: 14px; 
     }
 }
