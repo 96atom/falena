@@ -18,10 +18,13 @@ body {
     margin-bottom: 20px;
 }
 
-.header img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+.logo { /* Target the logo image */
+    display: block; /* Important for margin auto to work */
+    margin: 0 auto; /* Center block-level elements */
+    max-width: 100%;  /* Prevent logo from overflowing its container */
+    height: auto; /* Maintain aspect ratio */
+    /* Adjust the following values for desired size: */
+    width: 150px; /* Example width - adjust as needed */ 
 }
 
 .menu-section {
