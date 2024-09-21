@@ -134,3 +134,20 @@ body {
     border-top: 1px solid #ccc; /* Light gray separator line */
     margin: 20px 0;
 }
+/* Media queries for responsiveness */
+
+@media (max-width: 768px) { /* For typical phone sizes and smaller */
+    .popup {
+        padding: 20px; /* Reduced padding on smaller screens */
+        max-width: 95%; /* Ensure the popup covers most of the screen width */
+    }
+
+    .popup img {
+        width: 90%; /* Image takes up full width on smaller screens */
+        margin-bottom: 15px; 
+    }
+
+    .close {
+        font-size: 20px; /* Slightly smaller close button */
+    }
+}
