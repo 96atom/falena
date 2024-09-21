@@ -1,7 +1,7 @@
 body {
     font-family: 'Playfair Display', serif;
     background-color: #f8f4e9;
-    color: #3c2f2f; /* Dark brown text color */
+    color: #3c2f2f; 
 }
 
 .container {
@@ -29,9 +29,9 @@ body {
 }
 
 .menu-section h2 {
-    font-size: 24px;
+    font-size: 24px; 
     margin-bottom: 10px;
-    color: #3c2f2f; /* Dark brown heading color */
+    color: #3c2f2f;
     font-weight: bold;
 }
 
@@ -41,12 +41,13 @@ body {
     align-items: center;
     padding: 10px 0;
     border-bottom: 1px solid #eee;
-    cursor: pointer; /* Indicate clickable */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .menu-item:hover {
-    background-color: #f5f5f5; /* Light gray background on hover */
+    background-color: #f5f5f5;
+    text-decoration: underline; 
 }
 
 .menu-item:last-child {
@@ -54,46 +55,39 @@ body {
 }
 
 .menu-item img {
-    width: 30px; /* Smaller image size */
+    width: 30px;
     height: 30px;
     margin-right: 10px;
 }
 
 .menu-item-name {
-    font-size: 18px;
-    color: #3c2f2f; /* Dark brown item name color */
+    font-size: 18px; 
+    color: #3c2f2f; 
 }
 
 .menu-item-price {
-    font-size: 16px;
+    font-size: 16px; 
     color: #666;
 }
 
-/* Style for the rounded image section */
+/* Rounded Image Section */
 .rounded-image-section {
     position: relative;
-    width: 200px; /* Adjust width as needed */
-    height: 200px; /* Adjust height as needed */
+    width: 200px; 
+    height: 200px; 
     overflow: hidden;
-    border-radius: 50%; /* Make it a circle */
-    margin: 0 auto; /* Center the image */
-    margin-bottom: 20px; /* Add some spacing below */
+    border-radius: 50%; 
+    margin: 0 auto; 
+    margin-bottom: 20px; 
 }
 
 .rounded-image-section img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; 
 }
 
-/* Advanced styling using Tailwind CSS (optional) */
-/* Add Tailwind CSS classes for more customization */
-/* Example: */
-.menu-item:hover {
-   text-decoration-line:underline;
-}
-
-/* Style for the popup modal */
+/* Popup Modal Styles */
 .popup {
     display: none;
     position: fixed;
@@ -101,53 +95,86 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fff;
-    /* Increased padding for a larger popup */
     padding: 40px; 
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    /* Set a max width for the popup (adjust as needed) */
-    max-width: 80%; 
-    /* Allow the popup content to be scrollable if it exceeds max-height */
+    max-width: 80%;
     overflow-y: auto; 
 }
 
 .popup img {
-    /* Image will take full available width */
-    width: 90%;  
+    width: 100%; 
     height: auto;
-    margin-bottom: 20px; /* More space below the image */
+    object-fit: contain; 
+    margin-bottom: 20px;
 }
 
 .close {
     position: absolute;
     top: 10px;
     right: 15px;
-    font-size: 25px;
+    font-size: 25px; 
     cursor: pointer;
 }
 
-
-/* Separator line */
+/* Separator Line */
 .section-divider {
     border: none;
-    border-top: 1px solid #ccc; /* Light gray separator line */
+    border-top: 1px solid #ccc; 
     margin: 20px 0;
 }
-/* Media queries for responsiveness */
 
-@media (max-width: 768px) { /* For typical phone sizes and smaller */
+/* Media Queries for Responsiveness */
+
+/* Tablet-sized screens and smaller */
+@media (max-width: 1024px) { 
+    .container {
+        width: 90%;
+    }
+
+    .menu-item {
+        font-size: 16px; 
+    }
+
+    .menu-section h2 {
+        font-size: 22px;
+    }
+}
+
+/* Typical phone sizes and smaller */
+@media (max-width: 768px) { 
+    .container {
+        width: 95%;
+        padding: 15px; 
+    }
+
     .popup {
-        padding: 20px; /* Reduced padding on smaller screens */
-        max-width: 95%; /* Ensure the popup covers most of the screen width */
+        padding: 20px; 
+        max-width: 95%; 
     }
 
     .popup img {
-        width: 100%; /* Image takes up full width on smaller screens */
         margin-bottom: 15px; 
     }
 
     .close {
-        font-size: 20px; /* Slightly smaller close button */
+        font-size: 20px; 
+    }
+
+    .menu-section h2 {
+        font-size: 20px; 
+    }
+
+    .menu-item {
+        font-size: 14px; 
+    }
+
+    .menu-item-name {
+        font-size: 16px;
+    }
+
+    .menu-item-price {
+        font-size: 14px; 
     }
 }
