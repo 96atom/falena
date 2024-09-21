@@ -21,8 +21,8 @@ body {
 .logo { /* Target the logo image */
     display: block; /* Important for margin auto to work */
     margin: 0 auto; /* Center block-level elements */
-         width: 100px; /* Original size */
-        height: 100px;/* Maintain aspect ratio */
+    width: 100%;  /* Prevent logo from overflowing its container */
+    height: 100%; /* Maintain aspect ratio */
     /* Adjust the following values for desired size: */
     width: 150px; /* Example width - adjust as needed */ 
 }
